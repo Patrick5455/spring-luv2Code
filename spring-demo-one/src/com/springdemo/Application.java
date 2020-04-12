@@ -16,7 +16,7 @@ public class Application {
 		
 		System.out.println(coach.getDailyFortune());
 		
-		
+		ctx.close();
 	}
 
 }
