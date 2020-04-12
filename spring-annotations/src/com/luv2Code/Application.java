@@ -11,7 +11,7 @@ public class Application {
 		//Coach coach = ctx.getBean("trackID", Coach.class);
 		
 		//usinf default bean ID
-		Coach coach = ctx.getBean("trackCoach", Coach.class);
+		Coach coach = ctx.getBean("tennisCoach", Coach.class);
 
 		
 		System.out.println(coach.getDailyWorkOut());
