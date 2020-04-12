@@ -11,6 +11,17 @@ public class TrackCoach implements Coach {
 
 	public TrackCoach() {}
 
+	
+	public void initMethod() {
+		
+		System.out.println("Started with initialisation method");
+	}
+	
+	public void destroyMethod() {
+		System.out.println("Ended with destroy method");
+	}
+	
+	
 	@Override
 	public String getDailyWorkOut() {
 		return "Run a hard 5k";

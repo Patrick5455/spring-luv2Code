@@ -7,7 +7,12 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-   					 <!-- Define your beans here -->
+				<!-- Load Properties File-->
+			
+				
+				<context:property-placeholder location="classpath:sport.properties"/>
+
+   					 <!-- Define your beans here -->   					 
     
      <!-- Define dependency bean -->
      <bean
@@ -36,11 +41,18 @@
     	
     	<!-- NB: value is used for literal values 
     	and ref is used for reference to configured objects or dependencies -->
-   		
+   	
+   			<!-- configuring literal values by hard coding -->
+   
+   	<!-- 
    		<property name="email" value="patrickojunde@gmail.com"/>
    		<property name= "team" value="Team Phoenix"/>
-    </bean>
-    
+   	 -->
+   		
+   		<!-- configuring literal values with  property files -->
+   		<property name="email" value="${foo.email}"/>
+   		<property name= "team" value="${foo.team}"/>
+    </bean>    
     
     
 </beans>
