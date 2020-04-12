@@ -15,7 +15,6 @@
      	class="com.springdemo.HappyFortuneService">
      </bean>
      
-     
      <!-- Constructor Injection -->
    	<bean
     	id ="coach"
@@ -24,15 +23,22 @@
     	<constructor-arg ref="fortune"/>
     </bean>
     
-    
     <!-- Setter injection -->
     <bean 
     	id="cricketCoach" 
     	class="com.springdemo.CricketCoach">
     	<!-- setup setter injection -->
+    	
+    	<!-- NB: The name parameter must macth the name 
+    	of the setter method "setFortuneService"  -->
+    	
     	<property name="fortuneService" ref="fortune"/>
+    	
     	<!-- NB: value is used for literal values 
     	and ref is used for reference to configured objects or dependencies -->
+   		
+   		<property name="email" value="patrickojunde@gmail.com"/>
+   		<property name= "team" value="Team Phoenix"/>
     </bean>
     
     
