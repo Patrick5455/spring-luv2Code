@@ -10,8 +10,16 @@ public class TennisCoach implements Coach {
 	private FortuneService fortune;
 
 	//construtor injection with java annotation @Autowired
-	@Autowired	
-	public TennisCoach(FortuneService fortune) {
+	
+//	@Autowired	
+//	public TennisCoach(FortuneService fortune) {
+//		this.fortune = fortune;
+//	}
+	
+	
+	// setter injection
+	@Autowired
+	public void setFortune(FortuneService fortune) {
 		this.fortune = fortune;
 	}
 
