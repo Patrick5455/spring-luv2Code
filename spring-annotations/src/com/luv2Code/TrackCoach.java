@@ -2,7 +2,8 @@ package com.luv2Code;
 
 import org.springframework.stereotype.Component;
 
-@Component("trackID")
+//@Component("trackID")
+@Component() //use default bean ID-- className in lowerCase
 public class TrackCoach implements Coach {
 
 	@Override

@@ -8,7 +8,11 @@ public class Application {
 
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-		Coach coach = ctx.getBean("trackID", Coach.class);
+		//Coach coach = ctx.getBean("trackID", Coach.class);
+		
+		//usinf default bean ID
+		Coach coach = ctx.getBean("trackCoach", Coach.class);
+
 		
 		System.out.println(coach.getDailyWorkOut());
 		
