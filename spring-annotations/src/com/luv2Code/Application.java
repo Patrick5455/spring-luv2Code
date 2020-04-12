@@ -16,6 +16,8 @@ public class Application {
 		
 		System.out.println(coach.getDailyWorkOut());
 		
+		System.out.println(coach.getDailyFortune());
+		
 		
 	}
 
