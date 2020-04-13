@@ -2,9 +2,11 @@ package com.luv2Code;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+//@Scope("prototype")
 public class TennisCoach implements Coach {
 	
 	//field injection
@@ -41,6 +43,16 @@ public class TennisCoach implements Coach {
 	public String getDailyFortune() {
 		
 		return fortune.getFortune();
+	}
+	
+	//@PostConstruct //-- init-method XML
+	public void initMethod() {
+		System.out.println(">> This is the INIT/POSTCONSTRUCT method");
+	}
+	
+	//@PreDestroy //-- destory-method XML
+	public void destroyMethod() {
+		System.out.println(">> This is the DESTORY/POSTDESTROY method");
 	}
 
 }

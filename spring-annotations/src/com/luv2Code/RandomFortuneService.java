@@ -20,7 +20,7 @@ public class RandomFortuneService implements FortuneService {
 		int index = rand.nextInt(fortuneArray.length);
 		
 		String fortune = fortuneArray[index];
-		
+		 
 		return fortune ;
 	}
 
