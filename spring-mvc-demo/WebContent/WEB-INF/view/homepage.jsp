@@ -11,7 +11,7 @@
 <body>
 <h2>Welcome to my HomePage</h2>
 <hr>
-<a href="showForm"
+<a href="form/showForm"
 >Register Here</a>
 
 </body>
