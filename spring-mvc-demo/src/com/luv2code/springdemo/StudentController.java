@@ -25,8 +25,13 @@ public class StudentController {
 		//log bound data
 		System.out.println("Student FirstName:  " + theStudent.getFirstName());
 		System.out.println("Student LastName:  " + theStudent.getLastName());
+		System.out.println("Student Country:  " + theStudent.getCountry());
 
 		return "student-form-response";
 	}
+	
+	
+	
+	
 
 }
