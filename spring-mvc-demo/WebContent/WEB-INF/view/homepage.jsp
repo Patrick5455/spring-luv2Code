@@ -12,7 +12,9 @@
 <h2>Welcome to my HomePage</h2>
 <hr>
 <a href="form/showForm"
->Register Here</a>
+>Name</a>
+<br>
+<a href="student/showForm">Student Registration</a>
 
 </body>
 </html>
