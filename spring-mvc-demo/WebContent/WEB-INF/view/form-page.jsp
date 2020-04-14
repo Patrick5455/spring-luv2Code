@@ -10,7 +10,7 @@
 
 <body>
 
-<form action="processForm" method="GET" >
+<form action="processForm3" method="GET" >
 
 <input name="studentName" placeholder="Enter Your Name Here"/>
 
