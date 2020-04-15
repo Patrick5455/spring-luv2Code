@@ -26,6 +26,7 @@ public class StudentController {
 		System.out.println("Student FirstName:  " + theStudent.getFirstName());
 		System.out.println("Student LastName:  " + theStudent.getLastName());
 		System.out.println("Student Country:  " + theStudent.getCountry());
+		System.out.println("Student Favorite Language:  " + theStudent.getFavoriteLanguage());
 
 		return "student-form-response";
 	}
