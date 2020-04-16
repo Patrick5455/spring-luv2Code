@@ -23,6 +23,18 @@
 		<property name="prefix" value="/WEB-INF/view/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	
+	<!-- load custom message resources -->
+		<!-- it is important that you follow this exact format -->
+	
+	<bean 
+	id="messageSource"
+  class="org.springframework.context.support.ResourceBundleMessageSource">
+	
+	<!-- the value specifies the path where the file message.properties is located -->
+	<property name="basenames" value="resources/messages"/>
+	<!-- no need to add .properties to messages. Spring will do that for us in the background -->
+	</bean>
 
 </beans>
 

@@ -31,6 +31,8 @@ public class CustomerController {
 		StringTrimmerEditor trim = new StringTrimmerEditor(true);
 		
 		binder.registerCustomEditor(String.class, trim);
+		
+		
 	}
 	
 	@RequestMapping("/processForm")
@@ -40,6 +42,11 @@ public class CustomerController {
 		// the use of | is a trick to check for white spaces
 		System.out.println("White Space: |"+ customer.getFirstName()+customer.getLastName()+"|");
 		
+		
+		//log binding result - to check details of any error
+		System.out.println("Binder Result: " + bindingResult);
+		
+		System.out.println("\n\n\n");
 		
 		if(bindingResult.hasErrors()) {
 			return "customer-form";

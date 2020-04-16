@@ -24,10 +24,10 @@ First Name: <form:input type="text" path="firstName"/>
 Last Name (*): <form:input type="text" path="lastName"/>
 <form:errors path="lastName" cssClass="error"/>
 <br>
-Free Passes: <form:input  path="freePasses"/>
-<form:errors path="freePasses" cssClass="error"/>
+Free Passes: <form:input path="freePasses"/>
+<form:errors  path="freePasses" cssClass="error"/>
 <br>
-Postal Code<form:input type="text" path="postalCode"/>
+Postal Code<form:input path="postalCode"/>
 <form:errors path="postalCode" cssClass="error"/>
 <br>
 <input type="submit" value="Submit"/>
