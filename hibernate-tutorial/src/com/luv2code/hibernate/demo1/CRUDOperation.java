@@ -3,44 +3,39 @@ package com.luv2code.hibernate.demo1;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
 import com.luv2code.hibernate.demo.entity.Student;
 
-public class CrudOPeration {
-	
-	public static void main(String... args) {
-		
-		//create session factory
+public class CRUDOperation {
+
+	public static void main(String[] args) {
+
 		SessionFactory factory = new Configuration()
+				// it is not compulsory to inlude the config file in the parameter. Hibernate auto-locate the config file in your classpath
 				.configure("hibernate.cfg.xml")
 				.addAnnotatedClass(Student.class)
 				.buildSessionFactory();
 		
-		// create a session
 		Session session = factory.getCurrentSession();
 		
 		try {
-			//create student object for session transaction
-			Student student = new 	Student("Patrick","Ojunde","patrickojunde@gmail.com");
-			System.out.println("creating new student");
 			
-			// begin transaction
+			//create an object of table student
+			Student student = new Student("Stephen", "Mayowa", "stephenmayowa@gmail.com");
+			
+			//begin transaction
 			session.beginTransaction();
-			System.out.println("beginning trnsaction");
 			
-			//save student transaction
+			//save object to transaction
 			session.save(student);
-			System.out.println("saving transaction");
 			
-			//get and commit student transaction
+			// get and commit transaction
 			session.getTransaction().commit();
-			System.out.println("committing transaction");
-			
 			
 		} finally {
 			factory.close();
 		}
-		
-		
+
 	}
 
 }

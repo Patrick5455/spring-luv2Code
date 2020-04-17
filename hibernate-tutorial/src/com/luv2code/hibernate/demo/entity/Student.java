@@ -8,26 +8,24 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="student")
+@Table(name = "student")
 public class Student {
 	
-	@Id //primary key
-   // @GeneratedValue(strategy=GenerationType.AUTO)
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id")
+	@Id
+	@GeneratedValue(strategy =GenerationType.IDENTITY)
 	private String id;
 	
-	@Column(name="first_name")
+	@Column(name = "first_name")
 	private String firstName;
 	
-	@Column(name="last_name")
+	@Column(name = "last_name")
 	private String lastName;
 	
-	@Column(name="email")
+	@Column(name = "email")
 	private String email;
 
-	
-	public Student() {}
+	public Student() {
+	}
 
 	public Student(String firstName, String lastName, String email) {
 		this.firstName = firstName;
@@ -58,16 +56,7 @@ public class Student {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	public String getId() {
-		return id;
-	}
 
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	// for debugging purpose
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
@@ -75,10 +64,5 @@ public class Student {
 	
 	
 	
-	
-	
 
-	
 }
-	
-	
