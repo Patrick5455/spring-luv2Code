@@ -1,3 +1,4 @@
+package com.luv2code.jdbc;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
@@ -7,9 +8,10 @@ public class TestJDBC {
 
 	public static void main(String[] args) {
 		
-		String jdbcurl = "jdbc:mysql://127.0.0.1:3306/hb_student_tracker?useSSL=false"; 
+		// the part after "false" in the url string is not compulsory
+		String jdbcurl = "jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false&amp;serverTimezone=UTC"; 
 		String user = "patrick";
-		String pass = "O PEpatofat5455101$";
+		String pass = "OPEpatofat5455101$";
 
 		try {
 			
