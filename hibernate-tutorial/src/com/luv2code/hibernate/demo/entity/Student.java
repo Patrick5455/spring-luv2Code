@@ -2,6 +2,8 @@ package com.luv2code.hibernate.demo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,6 +12,8 @@ import javax.persistence.Table;
 public class Student {
 	
 	@Id //primary key
+   // @GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
 	private String id;
 	
@@ -53,6 +57,14 @@ public class Student {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	// for debugging purpose

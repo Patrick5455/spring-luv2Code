@@ -4,6 +4,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
+			<attribute name="limit-modules" value="java.se,jdk.accessibility,jdk.attach,jdk.compiler,jdk.httpserver,jdk.jartool,jdk.javadoc,jdk.jconsole,jdk.jdi,jdk.management,jdk.sctp,jdk.security.auth,jdk.security.jgss,jdk.unsupported,jdk.dynalink,jdk.jfr,jdk.jshell,jdk.jsobject,jdk.management.jfr,jdk.net,jdk.scripting.nashorn,jdk.unsupported.desktop,jdk.xml.dom,java.smartcardio,jdk.aot,jdk.charsets,jdk.crypto.cryptoki,jdk.crypto.ec,jdk.editpad,jdk.hotspot.agent,jdk.internal.vm.ci,jdk.internal.vm.compiler,jdk.internal.vm.compiler.management,jdk.jcmd,jdk.jdeps,jdk.jlink,jdk.jstatd,jdk.localedata,jdk.naming.dns,jdk.naming.rmi,jdk.pack,jdk.rmic,jdk.scripting.nashorn.shell,jdk.zipfs"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/antlr-2.7.7.jar"/>
@@ -26,5 +27,6 @@
 	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.48.jar"/>
 	<classpathentry kind="lib" path="lib/stax-ex-1.8.jar"/>
 	<classpathentry kind="lib" path="lib/txw2-2.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-8.0.19.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

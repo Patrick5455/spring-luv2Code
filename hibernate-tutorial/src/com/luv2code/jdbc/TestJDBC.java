@@ -9,7 +9,7 @@ public class TestJDBC {
 	public static void main(String[] args) {
 		
 		// the part after "false" in the url string is not compulsory
-		String jdbcurl = "jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false&amp;serverTimezone=UTC"; 
+		String jdbcurl = "jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false&amp;serverTimezone=UTC"; //&amp;serverTimezone=UTC
 		String user = "patrick";
 		String pass = "OPEpatofat5455101$";
 
