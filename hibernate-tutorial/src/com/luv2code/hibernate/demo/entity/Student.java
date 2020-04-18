@@ -15,7 +15,7 @@ public class Student {
 	@Column(name = "id")
 	//GenerationType.IDENTITY is commonly used in mySql AutoIncrement
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
-	private String id;
+	private Integer id;
 	
 	@Column(name = "first_name")
 	private String firstName;
@@ -64,7 +64,7 @@ public class Student {
 		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
 	}
 
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 	

@@ -7,7 +7,7 @@ import org.hibernate.cfg.Configuration;
 import java.util.List;
 
 import com.luv2code.hibernate.demo.entity.Student;
-public class HIbernateQueries {
+public class QueryStudentDemo {
 
 	public static void main(String[] args) {
 		
@@ -23,47 +23,44 @@ public class HIbernateQueries {
 		
 		try {
 			
+			List<Student> students;
+			
 			session.beginTransaction();
 			
 			// get a list of students from the database
 			
-			List<Student> students1 = session.createQuery("from Student").getResultList();
+			students = session.createQuery("from Student").getResultList();
 			
-			displayStudent(students1);
+			displayStudent(students);
 			
 			System.out.println("\n\n\n");
 			
 			// get list of students whose last name = "Ojunde"
 			
-			List<Student> students2 = session.createQuery("from "
+			students = session.createQuery("from "
 					+ "Student s where s.lastName='Ojunde'").getResultList();
 			
-			displayStudent(students2);
+			displayStudent(students);
 			
 			System.out.println("\n\n\n");
 			
 			// get list of students whose email contains @gmail.com"
 
 			
-			List<Student> students3 = session.createQuery("from "
+			students = session.createQuery("from "
 					+ "Student s where s.email like '%@gmail.com'").getResultList();
 			
-			displayStudent(students3);
+			displayStudent(students);
 						
-			session.getTransaction().commit();
-			
+			session.getTransaction().commit();		
 		} finally {
 			factory.close();
 		}
-
 	}
-
+	//method call
 	public static void displayStudent(List<Student> students) {
-		for(Student student : students) {
-			
+		for(Student student : students) {		
 			System.out.println(student);
-			
 		}
 	}
-
 }

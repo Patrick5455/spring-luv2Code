@@ -6,7 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.luv2code.hibernate.demo.entity.Student;
 
-public class MultipleIds {
+public class CreateStudentDemo2 {
 
 	public static void main(String[] args) {
 

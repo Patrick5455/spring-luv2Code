@@ -6,7 +6,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.luv2code.hibernate.demo.entity.Student;
 
-public class ReadingDataWithHibernate {
+public class QUeryStudentDemo2 {
 
 	public static void main(String[] args) {
 		
@@ -14,7 +14,6 @@ public class ReadingDataWithHibernate {
 				.configure()
 				.addAnnotatedClass(Student.class)
 				.buildSessionFactory();
-		
 		
 		Session session = factory.getCurrentSession();
 		
@@ -37,13 +36,8 @@ public class ReadingDataWithHibernate {
 			// NB: This method call closes the session.
 			session.getTransaction().commit();
 
-			
-		} finally {
-			
-			factory.close();
-			
+		} finally {			
+			factory.close();	
 		} 
-		
 	}
-
 }
