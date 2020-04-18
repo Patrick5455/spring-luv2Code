@@ -12,6 +12,8 @@ import javax.persistence.Table;
 public class Student {
 	
 	@Id
+	@Column(name = "id")
+	//GenerationType.IDENTITY is commonly used in mySql AutoIncrement
 	@GeneratedValue(strategy =GenerationType.IDENTITY)
 	private String id;
 	
@@ -61,6 +63,12 @@ public class Student {
 	public String toString() {
 		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
 	}
+
+	public String getId() {
+		return id;
+	}
+	
+	
 	
 	
 	
