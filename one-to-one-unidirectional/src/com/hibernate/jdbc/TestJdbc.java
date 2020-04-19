@@ -1,8 +1,7 @@
 package com.hibernate.jdbc;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+//import java.sql.SQLException;
 
 public class TestJdbc {
 	
@@ -19,7 +18,7 @@ public class TestJdbc {
 			
 			System.out.println("Connection Successful");
 			
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
