@@ -44,7 +44,7 @@ public class DemoQueryUpdate {
 			myInstructorDetail.setHobby("Thinking");
 			myInstructorDetail.setYoutubeChannel("www.youtube.com/chi");
 			
-			// link the two objects
+			// associate the two objects
 			myInstructor.setInstructorDetail(myInstructorDetail);
 			
 			
