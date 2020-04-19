@@ -9,7 +9,7 @@ public class TestJDBC {
 		
 		 String url = "jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false&amp;serverTimezone=UTC";
 		 String user = "patrick";
-		 String pass = "OPEpatofat5455101$";
+		 String pass = "OPEpatofat5455101#";
 		 
 		 
 		 try {
