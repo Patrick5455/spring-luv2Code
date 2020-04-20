@@ -35,7 +35,6 @@ public class DemoGetBinary {
 			System.out.println( "Instructor: " +myInstructorDetail.getInstructor());
 
 			
-			
 			session.getTransaction().commit();
 			
 		} catch (Exception e) {

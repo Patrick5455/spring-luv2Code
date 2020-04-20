@@ -24,7 +24,13 @@ public class InstructorDetail {
 	@Column(name = "hobby")
 	private String hobby;	
 	
-	@OneToOne(mappedBy = "instructorDetail", cascade = CascadeType.ALL)
+	//@OneToOne(mappedBy = "instructorDetail", cascade = CascadeType.ALL) 
+	// used for Cascade of all action)
+	
+	@OneToOne(mappedBy = "instructorDetail", cascade = {CascadeType.DETACH,CascadeType.PERSIST,CascadeType.MERGE, CascadeType.REFRESH}) 
+	// used for single action for delete. 
+	//There will not be a Cascade for delete because we are not using Cascade.ALL and we do not specify Cascade.Remove
+	
 	// the mapped by value tells hibernate where to look for the reference
 	// of InstructorDetail as a FK in Instructor
 	private Instructor instructor;
