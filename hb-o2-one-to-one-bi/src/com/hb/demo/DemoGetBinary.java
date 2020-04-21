@@ -16,33 +16,39 @@ public class DemoGetBinary {
 				.addAnnotatedClass(Instructor.class)
 				.addAnnotatedClass(InstructorDetail.class)
 				.buildSessionFactory();
-		
+
+		// create session
 		Session session = factory.getCurrentSession();
 		
-		try {
+		try {			
 			
-			// we want to test the bi-directional movement; whether a change in B will also affect A
-			
-		
-			int myId =2;
-			
+			// start a transaction
 			session.beginTransaction();
-			
-			InstructorDetail myInstructorDetail = session.get(InstructorDetail.class, myId);
-			
-			System.out.println("Instructor: "+myInstructorDetail);//.getInstructor());
-			
-			System.out.println( "Instructor: " +myInstructorDetail.getInstructor());
 
+			// get the instructor detail object
+			int theId = 2;
+			InstructorDetail tempInstructorDetail = 
+					session.get(InstructorDetail.class, theId);
 			
+			// print the instructor detail
+			System.out.println("tempInstructorDetail: " + tempInstructorDetail);
+						
+			// print  the associated instructor
+			System.out.println("the associated instructor: " + 
+								tempInstructorDetail.getInstructor());
+			
+			// commit transaction
 			session.getTransaction().commit();
 			
-		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("Done!");
 		}
-		
+		catch (Exception exc) {
+			exc.printStackTrace();
+		}
 		finally {
+			// handle connection leak issue
 			session.close();
+			
 			factory.close();
 		}
 	}
