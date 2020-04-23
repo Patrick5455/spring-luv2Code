@@ -33,6 +33,13 @@ public class Reviews {
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
+
+	@Override
+	public String toString() {
+		return "Reviews [id=" + id + ", comment=" + comment + "]";
+	}
+	
+	
 	
 	
 	

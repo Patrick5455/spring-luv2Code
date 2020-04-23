@@ -36,19 +36,20 @@ public class Course {
 	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	private List<Reviews> reviews;
 
-	public List<Reviews> getReviews() {
-		return reviews;
-	}
-
-	public void setReviews(List<Reviews> reviews) {
-		this.reviews = reviews;
-	}
 
 	public Course() { 
 	}
 
 	public Course(String title) {
 		this.title = title;
+	}
+	
+	public List<Reviews> getReviews() {
+		return reviews;
+	}
+
+	public void setReviews(List<Reviews> reviews) {
+		this.reviews = reviews;
 	}
 
 	public String getTitle() {
@@ -68,9 +69,15 @@ public class Course {
 		this.instructor = instructor;
 	}
 
+//	@Override
+//	public String toString() {
+//		return "Course [id=" + id + ", title=" + title + ", instructor=" + instructor .toString()+ "]";
+//	}
+	
+	
 	@Override
 	public String toString() {
-		return "Course [id=" + id + ", title=" + title + ", instructor=" + instructor .toString()+ "]";
+		return "Course [id=" + id + ", title=" + title + "]";
 	}
 	
 	// add a convenience method fpr review
