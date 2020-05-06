@@ -8,4 +8,12 @@ public interface CustomerRepository {
 	
 	List<Customer> getCustomers();
 
+	void save(Customer customer);
+	
+	Customer update(Integer id);
+
+	void delete(int id);
+
+	void delete2(int id);
+
 }
